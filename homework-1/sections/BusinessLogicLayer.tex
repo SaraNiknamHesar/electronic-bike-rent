@@ -1,0 +1,22 @@
+\section{Business Logic Layer}
+\input{sections/BLL/ClassDiagram}
+\input{sections/BLL/SequenceDiagram}
+This sequence diagram depicts the communication flow for a REST API call from a JSP page (Dashboard) in our web application. The objective of this diagram is to illustrate the specific steps involved in the communication flow between the different components involved in this process.
+
+\vspace{10pt} 
+
+At the start of the sequence, an actor sends a request to the WebServer for the Dashboard page. The WebServer forwards this request to the DashboardServlet, which renders the DashBoardJSP page. The DashBoardJSP page loads the necessary DashBoardJS script, which makes an HTTP GET request to retrieve customer data from the REST API (/rest/customer).
+
+\vspace{10pt} 
+
+The RestDispatcherServlet, which is responsible for handling all REST API requests in the web application, delegates the handling of the request to the CustomerRR class, which interacts with the CustomerDAO class to retrieve the customer data from the database. The customer data is returned to the CustomerRR object, which returns it to the RestDispatcherServlet. The RestDispatcherServlet then sends the response back to the dashboard javascript call, which in turn passes it to the last function (getCustomerList) which updates the HTML page.  
+
+\vspace{10pt} 
+
+Overall, this sequence diagram shows the complex interaction between different components involved in a REST API call in our web application, and how each component plays an important role in this process. It was challenging to comprehend this communication flow, and this diagram helps to provide a visual representation of how the different components work together to retrieve and display data from the REST API.
+
+
+
+\input{sections/BLL/RESTAPISummary}
+\input{sections/BLL/RESTErrorCodes}
+\input{sections/BLL/RESTAPIDetails}

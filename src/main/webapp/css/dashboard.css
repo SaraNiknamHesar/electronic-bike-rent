@@ -1,0 +1,118 @@
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: #F5F5F5;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    color: #888888FF;
+}
+
+#top-elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCCFF;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.non-chart-container {
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCCFF;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.chart-container:nth-child(3n+1) {
+    margin-right: 10px;
+}
+
+.chart-container:nth-child(3n) {
+    margin-left: 10px;
+}
+
+.chart-container:last-child {
+    width: calc(50% - 10px);
+}
+
+#gender-chart{
+    height: 250px !important;
+    width: 250px !important;
+    margin: auto;
+    margin-top:10px;
+}
+
+
+.chart-container canvas {
+    width: 100%;
+    height: calc(100% - 20px);
+}
+
+#map-container {
+    width: 100%;
+}
+#map {
+    height: 180px;
+    position: relative; /* Set position to relative */
+    z-index: 0; /* Set a lower z-index value */
+}
+
+
+#bottom-elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#revenue-chart-container canvas,
+#gender-chart-container canvas {
+    width: 100%;
+    height: calc(100% - 20px);
+}
+
+.chart-text {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #888888FF;
+    font-weight: 500;
+}
+
+.chart-text button {
+  margin-right: 10px;
+  margin-left: 50px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background-color: gray;
+  cursor: pointer;
+  font-size: 10px; /* Adjust the font size as needed */
+}
+
+#topLocationTable,
+#revenue-chart-container {
+    width: 50%;
+}
+
+#topLocationTable .table {
+    margin: 0 auto;
+}

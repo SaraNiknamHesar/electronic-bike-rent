@@ -1,0 +1,42 @@
+\subsection{REST Error Codes}
+
+%If needed, add few lines of text, describing the error codes table
+Here is the list of errors defined in the application.
+
+
+\begin{longtable}{|p{.15\columnwidth}|p{.2\columnwidth} |p{.6\columnwidth}|} 
+\hline
+\textbf{Error Code} & \textbf{HTTP Status Code} & \textbf{Description} \\\hline
+
+-103 & BAD\_REQUEST &   missing Email\\\hline
+-104 & BAD\_REQUEST &   missing Password \\\hline
+-105 & BAD\_REQUEST &  Submitted credentials are wrong \\\hline
+-200 & BAD\_REQUEST &  Operation unknown \\\hline
+-999 & INTERNAL\_SERVER
+\_ERROR &  Internal Error \\\hline
+-E100 &  &  cannot search for the rentals in the database\\\hline
+-E200 &  &  cannot search for the rentals: unexpected error while accessing the database\\\hline
+-E300 &   & cannot create the administrator: administrator already exists\\\hline
+-E400 &  &  unsupported multimedia type for an employee photo. expected image/png or image/jpg\\\hline
+-E4A1 & BAD\_REQUEST &  Accept request header missing\\\hline
+-E4A2 & NOT\_ACCEPTABLE &  unsupported output media type. resources are represented only in application/json\\\hline
+-E4A3 & BAD\_REQUEST &  Input media type not specified. content-type request header issing\\\hline
+-E4A4 & BAD\_REQUEST &  unsupported input media type. resources are represented only in application/json.\\\hline
+-E4A5 & METHOS\_NOT
+\_ALLOWED  &  unsupported operation\\\hline
+-E4A6 & NOT\_FOUND &  unknown resource requested\\\hline
+-E4A7 & BAD\_REQUEST &  wrong format for URL, e.g.: /administrator/email/{email}: no {email} specified\\\hline
+-E4A8 &  BAD\_REQUEST &  cannot create the resource, e.g.: no administrator JSON object found in the request\\\hline
+-E5A1 & INTERNAL\_SERVER
+\_ERROR   & Cannot create the resource: unexpected error.\\\hline
+-E5A2 & CONFLICT  &  cannot create the resource. it already exists\\\hline
+-E5A3 & NOT\_FOUND  &  resource Not found. cannot delete it.\\\hline
+-E5A4 & CONFLICT &   cannot delete resource: other resources depend on it.\\\hline
+-E10A1 & INTERNAL\_SERVER
+\_ERROR &  cannot list resource: unexpected error
+\\\hline
+
+
+\caption{ REST API}
+\label{tab:termGlossary}
+\end{longtable}

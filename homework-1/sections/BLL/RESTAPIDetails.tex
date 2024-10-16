@@ -1,0 +1,146 @@
+
+\subsection{REST API Details}
+
+%List here a few resources retrievable via REST API
+We reported three different types of resources that our web applications handle.
+
+\subsubsection*{ Available scooter's list in the database}
+% the description of the resource
+The following endpoint allows to a list getting all scooters which are available in the database.
+
+\begin{itemize}
+    \item URL: \texttt{ rest/scooters}
+    \item Method: \texttt{GET}
+    \item URL Parameters: No parameters are required in the URL
+    \item Data Parameters: No parameters are required
+    \item Success Response: Upon success, the servlet returns a JSON object with the required information.
+    \item Error Response:
+    
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E5A1, \{‘‘message’’ :\{‘Cannot list scooter(s): unexpected database error.'\}\} \\
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E5A1, \{‘‘message’’ :\{'Cannot list scooter(s): unexpected error.'\}\}
+    
+\end{itemize}
+
+\subsubsection*{ Available scooter rack's list in the database}
+% the description of the resource
+The following endpoint allows to a list getting all scooter racks which are available in the database.
+
+\begin{itemize}
+    \item URL: \texttt{ rest/scooterrack}
+    \item Method: \texttt{GET}
+    \item URL Parameters: No parameters are required in the URL
+    \item Data Parameters: No data parameters required.
+    \item Success Response: Upon success, the servlet returns a JSON object with the required information.
+    \item Error Response:
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E5A1, \{‘‘message’’ :\{‘Cannot list employee(s): unexpected database error.'\}\} \\
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E5A1, \{‘‘message’’ :\{'Cannot list employee(s): unexpected error.'\}\}
+    
+\end{itemize}
+
+\subsubsection*{ Scooter model's list in the database}
+% the description of the resource
+The following endpoint allows to a list getting all scooter models in the database.
+
+\begin{itemize}
+    \item URL: \texttt{ rest/model}
+    \item Method: \texttt{GET}
+    \item URL Parameters: No parameters are required in the URL
+    \item Data Parameters: No data parameters required.
+    \item Success Response: Upon success, the servlet returns a JSON object with the required information.
+    \item Error Response: 
+
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E6A1, \{‘‘message’’ :\{‘Cannot list models: unexpected error'\}\}
+\\
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E6A2, \{‘‘message’’ :\{'Cannot search models: unexpected error.'\}\}
+    
+\end{itemize}
+
+
+\subsubsection*{Customer's list in the database}
+
+\begin{itemize}
+    \item URL: \texttt{ rest/customer}
+    \item Method: \texttt{GET}
+    \item URL Parameters: No parameters are required in the URL
+    \item Data Parameters: No data parameters required.
+    \item Success Response: Upon success, the servlet returns a JSON object with the required information.
+    \item Error Response:
+    
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E10A1, \{‘‘message’’ :\{‘Cannot list customer(s): unexpected database error.'\}\}
+\\
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E10A1, \{‘‘message’’ :\{'Cannot list customer(s): unexpected error.'\}\}
+\end{itemize}
+
+
+\subsubsection*{ Administrator- ID }
+the following endpoint allows the access of the inf 
+\begin{itemize}
+    \item URL: \texttt{ rest/administrator/id/\{id\}}
+    \item Method: POST
+    \item URL Parameters: Required: administrator ID: the identifier of the administrator.
+    \item Data Parameters: 
+    \begin{itemize}
+       \item  Id:\{int\}
+    \end{itemize}
+    \item Success Response: Upon success, the servlet returns a JSON object with the required information.
+        \begin{itemize}
+       \item  Id:\{int\}
+       \item  email:\{string\}
+       \item  password:\{string\}
+    \end{itemize}
+
+    Content:"administrator":\{"id":1,"email":"admin@wascoot.com","password":"123321"\}\}
+    \item Error Response: 
+     
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E5A1, \{‘‘message’’ :\{‘Cannot search administrator(s): unexpected database error.'\}\}
+\\
+Code: BAD\_REQUEST\newline
+Content:‘‘code’’: -E4A7, \{‘‘message’’ :\{'Cannot search administrator(s): wrong format for URI /administrator/id/{id}.'\}\}
+\\
+Code: INTERNAL\_SERVER\_ERROR\newline
+Content:‘‘code’’: -E5A1, \{‘‘message’’ :\{'Cannot search administrator(s): unexpected error.'\}\}
+    
+\end{itemize}
+
+\subsubsection*{ Administrator- Email }
+
+\begin{itemize}
+    \item URL: \texttt{ rest/administrator/email/\{email\}}
+    \item Method: POST
+    \item URL Parameters: Required: administrator email: the email of the administrator.
+    \item Data Parameters: 
+    \begin{itemize}
+       \item  email:\{string\}
+    \end{itemize}
+    \item Success Response: Upon success, the servlet returns a JSON object with the required information.
+    \begin{itemize}
+       \item  Id:\{int\}
+       \item  email:\{string\}
+       \item  password:\{string\}
+    \end{itemize}
+    "administrator":\{"id":1,"email":"admin@wascoot.com","password":"123321"\}
+    
+    \item Error Response:
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E5A1, \{‘‘message’’ :\{‘Cannot search administrator(s): unexpected error.’\}\}
+\\
+Code: BAD\_REQUEST \newline
+Content:‘‘code’’: -E4A7, \{‘‘message’’ :\
+{‘Cannot search administrator(s): wrong format for 
+URL/administrator/email/{email}.’\}\}
+\\
+Code: INTERNAL\_SERVER\_ERROR \newline
+Content:‘‘code’’: -E5A1, \{‘‘message’’ :\{‘Cannot search administrator(s): unexpected database error’\}\}
+
+
+\end{itemize}
+

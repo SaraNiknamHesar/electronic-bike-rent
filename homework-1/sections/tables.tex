@@ -1,0 +1,77 @@
+ \begin{longtable}{|p{.20\columnwidth}|p{.20\columnwidth} |p{.30\columnwidth}|p{.25\columnwidth} |} 
+\hline
+\textbf{Entity} & \textbf{Description} & \textbf{Attributes} & \textbf{Identifier}  \\\hline
+
+
+Customers & 
+Represents the users who purchase the products & \begin{itemize}
+        \vspace{-1em}
+        \item ID: Unique number of the customer, Text
+        \item Last name: Surname of the customer, Text
+        \item First name: Name of the customer, Text
+        \item Email: Email of the customer, Text
+        \item Phone number: Telephone number of the customer, Int
+        \item Password: Login password of the customer, Text
+    \end{itemize}
+ &  ID\\\hline
+ 
+ Assistant &
+ Represents personell who provide technical support to customers & \begin{itemize}
+        \vspace{-1em}
+        \item ID: Unique number of the technical asssistant, Text
+        \item First name: Name of the technical assistant, Text
+        \item Last name: Surname of the technical assistant, Text
+        \item Email: Email of the technical assistant, Text
+    \end{itemize}
+ & ID \\\hline
+
+Warranty & 
+ Represents terms of agreement between the customer and the seller after purchases made on the product 
+ & \begin{itemize}
+     \item ID: Identifier for the product warranty term, Serial
+ \end{itemize}& ID  \\\hline
+
+Invoice &
+Represents listing and detailing the prices of all products that the customer has purchased from during a given period. & \begin{itemize}
+    \item ID: A unique record number assigned to each invoice issued, Serial
+    \item Date: Time-stamped date on which the transaction was recorded, Datetime 
+    \end{itemize} & ID \\\hline
+    
+Device & Represents the product that are meant for sale. & \begin{itemize}
+    \item ID: Unique number for a respective device, Serial
+    \item Price: The price of the product, Int
+    \item Name: The name of the product, Text
+    \item Category: The set that the devices belong to, Text
+\end{itemize} & ID \\\hline
+
+Technical Team &
+ Represents the group of team that help develop the company's products and services.
+ & \begin{itemize}
+     \item ID: Unique number for the technical team, Serial
+     \item First name: Name of the technical personnel, Text
+     \item Last name: Surname of the technical personnel, Text
+     \item Password: Login password of the technical personnel, Text
+ \end{itemize} & ID \\\hline
+
+ Warehouse & 
+ Represents the storage facility where the products are stored prior to their distribution for sale
+ & \begin{itemize}
+     \item Name: Name of the warehouse, Text
+     \item Address: Address of the warehouse, Text
+ \end{itemize} & Name \\\hline
+
+ History &
+ Represents Represents overview of the communication held between the customer and the assistant
+ & \begin{itemize}
+     \item ID: Unique ID of the communication, Text
+     \item Content: Recorded interaction between the assistant and the buyer, Text
+ \end{itemize} & ID\\\hline 
+
+Claim &
+Represents the repair or replacement of products that are within the warranty period
+& \begin{itemize}
+    \item Object-type: type of object, Enumeration
+    \item Closed: active of expired warranties 
+\end{itemize}
+& ID \\\hline
+\end{longtable}

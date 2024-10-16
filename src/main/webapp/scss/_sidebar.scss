@@ -1,0 +1,22 @@
+.nav-header {
+  @include custommq($max:63.9375rem){
+    width: 5rem;
+  }
+}
+
+.input-group{
+  .search-area{
+    .form-control{
+      height: 3rem;
+      &::placeholder{
+        color:var(--bs-card-color);
+      }
+    }
+  }
+}
+
+.basic-form{
+  .form-check-input[type="radio"] + .form-check-label{
+    margin-top: 5px;
+  }
+}
